@@ -2,7 +2,9 @@
 
 */
 
-const env = require('dotenv').parsed, telegram = new (require('node-telegram-bot-api'))(env.TOKEN, { polling: true });
+const env = require('dotenv').config().parsed, telegram = new (require('node-telegram-bot-api'))(env.TOKEN, { polling: true });
+
+console.log(env);
 
 /*
 
